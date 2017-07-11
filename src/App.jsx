@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import  { Form, FormControl, Button } from 'react-bootstrap'
 
 import Clock from './Clock'
 import './App.css'
@@ -29,13 +30,16 @@ class App extends Component {
 					<Clock
 						deadline={this.state.deadline}
 					/>
-				<input 
-					placeholder="New day"
-					onChange={event => this.setState({newDeadline: event.target.value})}
-				/>
-				<button onClick={() => this.changeDeadline()}>
-					Submit
-				</button>
+				<Form inline>
+					<FormControl 
+						className="Deadline-input"
+						placeholder="New date"
+						onChange={event => this.setState({newDeadline: event.target.value})}
+					/>
+					<Button onClick={() => this.changeDeadline()}>
+						Submit
+					</Button>
+				</Form>
 			</div>
 		)
 	}
