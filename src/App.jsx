@@ -9,7 +9,7 @@ class App extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			deadline: 'December 25, 2017',
+			deadline: 'January 23, 2018',
 			newDeadline: ''
 		}
 		
@@ -17,7 +17,7 @@ class App extends Component {
 
 	changeDeadline() {
 		this.setState({
-			deadline: this.state.newDeadline
+			deadline: this.state.newDeadline !== '' ? this.state.newDeadline : this.state.deadline
 		})
 	}
 
