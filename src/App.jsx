@@ -26,7 +26,9 @@ class App extends Component {
 				<div className="App-title">
 					Countdown to {this.state.deadline}
 				</div>
-					<Clock/>
+					<Clock
+						deadline={this.state.deadline}
+					/>
 				<input 
 					placeholder="New day"
 					onChange={event => this.setState({newDeadline: event.target.value})}
